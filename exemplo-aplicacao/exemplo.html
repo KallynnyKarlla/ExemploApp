@@ -2,6 +2,8 @@
 <html>
 	<head>
 		<title>SI - Exemplo App </title>
+		<meta charset="UTF-8">
+		
 		<!-- Bootstrap CSS -->
 		<link href="bootstrap.min.css" rel="stylesheet" media="screen">
 		<!-- jQuery -->
@@ -9,8 +11,32 @@
 	</head>
 
 	<body>
-		<div class="page-header">
-			<h1 class="text-center"> Hello World </h1>
+		<div class="page-header" style="background-color:rgba(40,40,40,0.4);color:#fff;margin-top:0px;">
+			<h1 class="text-center" style="margin:0px;padding-top:7px;"> Meus Seriados </h1>
 		</div>
+		
+		<!-- div adicionar série -->
+		<div class="well col-sm-4" style="margin:20px;background-color:rgba(0,200,0,0.4);"> 
+			<fieldset>
+				<legend> Adicionar Seriado</legend>
+
+				<label> Nome: </label>
+				<input type="text" id="nome" class="form-control" value="" required="required">
+
+				<label> Descricao: </label>
+				<textarea id="descricao" class="form-control" ></textarea>
+	
+				<label> Ano de Lançamento: </label>
+				<input type="text" id="lancamento" class="form-control" value="" required="required">
+
+				<input type="submit" class="btn btn-primary" value="OK">
+			</fieldset>
+		</div>
+		
+		<!-- div series -->
+		<div id="series"> 
+
+		</div>
+
 	</body>
 </html>
