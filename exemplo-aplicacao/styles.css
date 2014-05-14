@@ -1,1 +1,4 @@
-body{margin:0px auto;}
+#addSerie {
+	margin:40px;background-color:rgba(0,200,0,0.4);
+}
+#series div{margin:20px;}
