@@ -6,8 +6,8 @@ function adicionaSerie() {
 
 	$id = $nome.split(" ").join("");  // tira os espaços em branco do nome
 
-	if ($('#' + $id).length) { // se ja existir uma div com esse id lança uma msm de erro
-		alert("Seriado Já existe!");
+	if ($('#' + $id).length) { // se já existir uma div com esse id lança uma msg de erro
+		alert("Seriado já existe!");
 	} else {
 
 		$('#series').append('<div class="label label-danger col-sm-5"  id="' + $id + '"> </div>');
@@ -17,9 +17,16 @@ function adicionaSerie() {
 		$divSeriado.append("<br /> ");
 		$divSeriado.append("<strong> Descrição: </strong>" + $descricao);
 		$divSeriado.append("<br /> ");
-		$divSeriado.append("<strong> Lancamento: </strong>" + $lancamento);
+		$divSeriado.append("<strong> Lançamento: </strong>" + $lancamento);
 		$divSeriado.append("<br /> ");
-
+		limpaForms();
 		alert('Seriado Adicionado!');
+		
 	}
 }
+
+function limpaForms() {
+	$('#nome').val('');
+	$('#descricao').val('');
+	$('#lancamento').val('');
+} 
