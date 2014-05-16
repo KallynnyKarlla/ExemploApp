@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SI - Exemplo App </title>
+		<meta charset="UTF-8">
+		<!-- jQuery -->
+		<script src="javascript/jquery.js"></script>
+		<!-- meu próprio css e javascript -->
+		<link href="css/styles.css" rel="stylesheet">
+		<script src="javascript/exemplo.js"></script>
+	</head>
+
+	<body>
+		<nav>
+			<a href="#">Meus Seriados</a>
+			<ul>
+				<li>
+					<a href="#">Início</a>
+				</li>
+			</ul>
+		</nav>
+		
+		<div id="operacoesCrud">
+
+		<!-- div adicionar série -->
+		<div id="addSerie"> 
+			<fieldset>
+				<legend> <i> Adicionar Seriado </i> </legend>
+
+				<label> Nome: </label>
+				<input type="text" id="nome" value="" required="required">
+
+				<label title="Informações adicionais sobre o seriado."> Descrição: </label>
+				<textarea id="descricao"></textarea>
+	
+				<label> Ano de Lançamento: </label>
+				<input type="number" id="lancamento" value="" required="required">
+
+				<button type="button" onclick="adicionaSerie()">OK</button>
+			</fieldset>
+		</div>
+
+		<!-- div remover serie -->
+		<div id="remSerie"> 
+			<fieldset>
+				<legend> <i> Remover Seriado </i> </legend>
+
+				<label> Nome: </label>
+				<input type="text" id="nomeRem" value="" required="required">
+
+				<button type="button" onclick="removerSerie()">OK</button>
+			</fieldset>
+		</div>
+		
+		</div>
+
+		<!-- div series -->
+		<div id="series"> 
+			<h4>Seriados já assistidos</h4>
+		</div>
+	</body>
+</html>
