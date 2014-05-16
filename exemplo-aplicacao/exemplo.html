@@ -3,17 +3,13 @@
 	<head>
 		<title>SI - Exemplo App </title>
 		<meta charset="UTF-8">
-		
 		<!-- Bootstrap CSS -->
-		<link href="bootstrap.min.css" rel="stylesheet">
-
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<!-- jQuery -->
-		<script src="jquery.js"></script>
-
+		<script src="javascript/jquery.js"></script>
 		<!-- meu próprio css e javascript -->
-		<link href="styles.css" rel="stylesheet">
-		<script src="exemplo.js"></script>
-
+		<link href="css/styles.css" rel="stylesheet">
+		<script src="javascript/exemplo.js"></script>
 	</head>
 
 	<body>
@@ -26,9 +22,10 @@
 			</ul>
 		</nav>
 		
+		<div id="operacoesCrud" class="col-sm-4">
+		
 		<!-- div adicionar série -->
-
-		<div id="addSerie" class="well col-sm-4"> 
+		<div id="addSerie" class="well col-sm-12"> 
 			<fieldset>
 				<legend> <i> Adicionar Seriado </i> </legend>
 
@@ -44,12 +41,24 @@
 				<button type="button" onclick="adicionaSerie()" class="btn btn-primary">OK</button>
 			</fieldset>
 		</div>
+
+		<!-- div remover serie -->
+		<div id="remSerie" class="well col-sm-12"> 
+			<fieldset>
+				<legend> <i> Remover Seriado </i> </legend>
+
+				<label> Nome: </label>
+				<input type="text" id="nomeRem" class="form-control" value="" required="required">
+
+				<button type="button" onclick="removerSerie()" class="btn btn-primary">OK</button>
+			</fieldset>
+		</div>
 		
+		</div>
+
 		<!-- div series -->
 		<div id="series" class="col-sm-7"> 
 			<h4 class="text-center"> Seriados Já assistidos</h4>
-
 		</div>
-
 	</body>
 </html>
